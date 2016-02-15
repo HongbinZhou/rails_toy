@@ -1,0 +1,17 @@
+<h1> Here is all of the articles. </h1>
+
+<table>
+  <tr>
+    <td> <b> Id    </b> </td>
+    <td> <b> Title </b> </td>
+    <td> <b> Text  </b> </td>
+  </tr>
+
+  <% @articles.each_with_index do |article, index| %>
+  <tr>
+    <td> <%= index %> </td>
+    <td> <%= article.title %> </td>
+    <td> <%= article.text %> </td>
+  </tr>
+  <% end %>
+</table>
