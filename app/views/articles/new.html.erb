@@ -1,7 +1,15 @@
 <h1> New article </h1>
 
 <%= form_for :article, url: articles_path do |f| %>
+
 <%# form_for :article do |f| %>
+<%
+   # if not url: articles_path, the default route will be
+   #  ~articles/new~ with POST, wrong
+   # shoule be arcitles/create with POST, that is,
+   # if set url to articles, default action is POST,
+   # so it will find action articles/create
+%>
   <p>
     <%= f.label :title %><br>
     <%= f.text_field :title %>
